@@ -6,4 +6,8 @@ class ApplicationFormatter
   def self.call(*args)
     new(*args).call
   end
+
+  def result(success, error, value)
+    Result.new(success, error, value)
+  end
 end
