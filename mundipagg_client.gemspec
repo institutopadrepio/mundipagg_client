@@ -25,8 +25,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake",    "~> 12.3.3"
   spec.add_development_dependency "rspec",   "~> 3.7"
-  spec.add_runtime_dependency 'active_interaction', '~> 4.0'
-  spec.add_runtime_dependency 'faraday', '~> 0.9'
+  spec.add_runtime_dependency "active_interaction", "~> 4.0"
+  spec.add_dependency "excon", ">= 0.73.0"
+  spec.add_dependency "faraday"
   spec.add_development_dependency "vcr",     "~> 5.1"
   spec.add_development_dependency "webmock", "~> 3.8"
 end
