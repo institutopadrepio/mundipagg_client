@@ -2,6 +2,6 @@
 
 module MundipaggClient
   class Configuration
-    attr_accessor :api_key, :api_secret
+    attr_accessor :api_key
   end
 end
