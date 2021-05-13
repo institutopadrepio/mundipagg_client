@@ -5,6 +5,8 @@ module MundipaggClient
     module Customers
       class Create < MundipaggClient::MundipaggBase
         hash :params do
+          string :amount
+          string :customer_id
         end
 
         def execute
