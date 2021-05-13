@@ -9,7 +9,7 @@ module MundipaggClient
       {
         "Content-Type" => "application/json",
         "Accept" => "application/json",
-        "Authorization" => "Basic #{api_key}"
+        "Authorization" => "Basic #{MundipaggClient::MundipaggClientConfiguration.configuration.api_key}}"
       }
     end
 
