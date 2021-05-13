@@ -7,20 +7,37 @@ RSpec.describe MundipaggClient::Operations::Customers::Create do
   describe "#execute", vcr: true do
     before(:each) do
       MundipaggClient::MundipaggClientConfiguration.configure do |config|
-        config.api_key = "sk_test_XKYQWVbUYrfK8E2A"
+        config.api_key = "sk_test_123123"
       end
     end
 
+    subject { described_class.run(params: params) }
+
     context "success" do
+      let(:params) do
+        {
+          name: "Anchieta Junior",
+          email: "zemaria@escriva.com",
+          document: "036.899.945-95"
+        }
+      end
+
+      let(:expected_result) do
+        {
+          "id"=>"cus_rXZgoqjFwtj5GODx",
+          "name"=>"Anchieta Junior",
+          "email"=>"zemaria@escriva.com",
+          "document"=>"03689994595",
+          "type"=>"individual",
+          "delinquent"=>false,
+          "created_at"=>"2021-05-13T15:11:30Z",
+          "updated_at"=>"2021-05-13T15:11:30Z",
+          "phones"=>{}
+        }
+      end
+
       it "creates a customer on mundipagg" do
-        operation = described_class.run(
-          params: {
-            result: true,
-            name: "Anchieta"
-          }
-        )
-        p operation.result
-        # operation.result[:name].to eq "Anchieta"
+        expect(subject.result).to eq expected_result
       end
     end
   end
