@@ -8,15 +8,13 @@ require "mundipagg_client/operations/customers/create"
 require_relative "mundipagg_client/version"
 
 module MundipaggClient
-  module_function
-
   class MundipaggClientConfiguration
     def self.configuration
       @configuration ||= Configuration.new
     end
 
-    def self.configure(&block)
-      yeld(configuration)
+    def self.configure
+      yield(configuration)
     end
   end
 end
