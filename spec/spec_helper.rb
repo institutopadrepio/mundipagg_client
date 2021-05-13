@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
+require "bundler/setup"
+Bundler.setup
+
 require "mundipagg_client"
+require "faraday"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -12,4 +16,12 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+require "vcr"
+VCR.configure do |c|
+  c.ingnore_localhost = true
+  c.cassete_library_dir = "spec/cassetes"
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
 end
