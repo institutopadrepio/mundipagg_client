@@ -20,8 +20,8 @@ end
 
 require "vcr"
 VCR.configure do |c|
-  c.ingnore_localhost = true
-  c.cassete_library_dir = "spec/cassetes"
+  c.ignore_localhost = true
+  c.cassette_library_dir = "spec/cassetes"
   c.hook_into :webmock
   c.configure_rspec_metadata!
 end
