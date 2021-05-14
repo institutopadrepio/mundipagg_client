@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.mundipagg.com/core/v1/customers/cus_rXZgoqjFwtj5GODx
+    body:
+      encoding: UTF-8
+      string: '{"name":"José Anchieta Junior","email":"zemaria@escriva.com","type":"individual","document":"03689994595"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 May 2021 13:21:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a0ca306960000e0787110d000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 64f46dea8d8fe078-FOR
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ew0KICAiaWQiOiAiY3VzX3JYWmdvcWpGd3RqNUdPRHgiLA0KICAibmFtZSI6ICJKb3PDqSBBbmNoaWV0YSBKdW5pb3IiLA0KICAiZW1haWwiOiAiemVtYXJpYUBlc2NyaXZhLmNvbSIsDQogICJkb2N1bWVudCI6ICIwMzY4OTk5NDU5NSIsDQogICJ0eXBlIjogImluZGl2aWR1YWwiLA0KICAiZGVsaW5xdWVudCI6IGZhbHNlLA0KICAiY3JlYXRlZF9hdCI6ICIyMDIxLTA1LTEzVDE1OjExOjMwWiIsDQogICJ1cGRhdGVkX2F0IjogIjIwMjEtMDUtMTRUMTM6MjE6MjRaIiwNCiAgInBob25lcyI6IHt9DQp9
+    http_version: null
+  recorded_at: Fri, 14 May 2021 13:21:24 GMT
+recorded_with: VCR 5.1.0
