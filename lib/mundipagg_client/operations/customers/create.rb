@@ -30,7 +30,7 @@ module MundipaggClient
           {
             name: params[:name],
             email: params[:email],
-            type: 'individual',
+            type: "individual",
             document: formatted_document
           }
         end
