@@ -37,6 +37,10 @@ RSpec.describe MundipaggClient::Operations::Customers::Retrieve do
 
     context "failure" do
       let(:customer_id) { "cus_ahsdjgasdhgh" }
+
+      it "returns nil when no customer was found" do
+        expect { subject }.to raise_error("Invalid Mundipagg operation")
+      end
     end
   end
 end

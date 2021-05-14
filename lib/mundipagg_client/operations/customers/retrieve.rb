@@ -9,7 +9,7 @@ module MundipaggClient
         string :customer_id
 
         def execute
-          raise "Invalid Mundipagg Operation" unless request.success?
+          raise "Invalid Mundipagg operation" unless request.success?
 
           JSON.parse(request.body)
         end
