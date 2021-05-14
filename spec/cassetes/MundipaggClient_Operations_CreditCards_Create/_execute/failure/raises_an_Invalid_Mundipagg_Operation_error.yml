@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mundipagg.com/core/v1/customers/cus_akjshdjkahskdhj/cards
+    body:
+      encoding: UTF-8
+      string: '{"number":"4000000000000010","exp_month":"10","exp_year":"30","cvv":"123","holder_name":"","holder_document":"35558757019"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 14 May 2021 16:16:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '39'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a0d42feab0000e0924ea07000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 64f56dddde8ae092-FOR
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"message\": \"Customer not found\"\r\n}"
+    http_version: null
+  recorded_at: Fri, 14 May 2021 16:16:07 GMT
+recorded_with: VCR 5.1.0

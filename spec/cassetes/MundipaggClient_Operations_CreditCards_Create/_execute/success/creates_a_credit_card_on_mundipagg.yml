@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mundipagg.com/core/v1/customers/cus_rXZgoqjFwtj5GODx/cards
+    body:
+      encoding: UTF-8
+      string: '{"number":"4000000000000010","exp_month":"10","exp_year":"30","cvv":"123","holder_name":"","holder_document":"35558757019"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 May 2021 16:16:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a0d42fd520000e08ef1ac9000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 64f56ddbbfbae08e-FOR
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ew0KICAiaWQiOiAiY2FyZF9ibFJhR0VsQ3I1dVF6RDROIiwNCiAgImZpcnN0X3NpeF9kaWdpdHMiOiAiNDAwMDAwIiwNCiAgImxhc3RfZm91cl9kaWdpdHMiOiAiMDAxMCIsDQogICJicmFuZCI6ICJWaXNhIiwNCiAgImhvbGRlcl9uYW1lIjogIiIsDQogICJob2xkZXJfZG9jdW1lbnQiOiAiMzU1NTg3NTcwMTkiLA0KICAiZXhwX21vbnRoIjogMTAsDQogICJleHBfeWVhciI6IDIwMzAsDQogICJzdGF0dXMiOiAiYWN0aXZlIiwNCiAgInR5cGUiOiAiY3JlZGl0IiwNCiAgImNyZWF0ZWRfYXQiOiAiMjAyMS0wNS0xNFQxNjoxNjowN1oiLA0KICAidXBkYXRlZF9hdCI6ICIyMDIxLTA1LTE0VDE2OjE2OjA3WiIsDQogICJjdXN0b21lciI6IHsNCiAgICAiaWQiOiAiY3VzX3JYWmdvcWpGd3RqNUdPRHgiLA0KICAgICJuYW1lIjogIkpvc8OpIEFuY2hpZXRhIEp1bmlvciIsDQogICAgImVtYWlsIjogInplbWFyaWFAZXNjcml2YS5jb20iLA0KICAgICJkb2N1bWVudCI6ICIwMzY4OTk5NDU5NSIsDQogICAgInR5cGUiOiAiaW5kaXZpZHVhbCIsDQogICAgImRlbGlucXVlbnQiOiBmYWxzZSwNCiAgICAiY3JlYXRlZF9hdCI6ICIyMDIxLTA1LTEzVDE1OjExOjMwWiIsDQogICAgInVwZGF0ZWRfYXQiOiAiMjAyMS0wNS0xNFQxMzoyMToyNFoiLA0KICAgICJwaG9uZXMiOiB7fQ0KICB9DQp9
+    http_version: null
+  recorded_at: Fri, 14 May 2021 16:16:07 GMT
+recorded_with: VCR 5.1.0
