@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.mundipagg.com/core/v1/customers/cus_rXZgoqjFwtj5GODx/cards/card_heuaheua
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 14 May 2021 18:48:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a0dce80f00000e08eeb8c4000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 64f64d14bd34e08e-FOR
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"message\": \"Card not found.\"\r\n}"
+    http_version: null
+  recorded_at: Fri, 14 May 2021 18:48:30 GMT
+recorded_with: VCR 5.1.0
