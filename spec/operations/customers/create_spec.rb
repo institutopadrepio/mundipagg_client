@@ -7,7 +7,7 @@ RSpec.describe MundipaggClient::Operations::Customers::Create do
   describe "#execute", vcr: true do
     before(:each) do
       MundipaggClient::MundipaggClientConfiguration.configure do |config|
-        config.api_key = "sk_test_123123"
+        config.api_key = "sk_test_XKYQWVbUYrfK8E2A"
       end
     end
 
@@ -38,6 +38,20 @@ RSpec.describe MundipaggClient::Operations::Customers::Create do
 
       it "creates a customer on mundipagg" do
         expect(subject.result).to eq expected_result
+      end
+    end
+
+    context "failure" do
+      let(:params) do
+        {
+          name: "",
+          email: "fulano@email.com",
+          document: "123123"
+        }
+      end
+
+      it "raises an Invalid Mundipagg Operation error" do
+        expect { subject }.to raise_error("Invalid Mundipagg operation")
       end
     end
   end

@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mundipagg.com/core/v1/customers
+    body:
+      encoding: UTF-8
+      string: '{"name":"","email":"fulano@email.com","type":"individual","document":"123123"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Date:
+      - Fri, 14 May 2021 01:15:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '299'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a0a0aca880000cf92f5b7f000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 64f047240a43cf92-FOR
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"message\": \"The request is invalid.\",\r\n  \"errors\": {\r\n
+        \   \"customer.name\": [\r\n      \"The name field is required.\"\r\n    ]\r\n
+        \ },\r\n  \"request\": {\r\n    \"name\": \"\",\r\n    \"email\": \"fulano@email.com\",\r\n
+        \   \"document\": \"123123\",\r\n    \"type\": \"individual\",\r\n    \"phones\":
+        {},\r\n    \"metadata\": {}\r\n  }\r\n}"
+    http_version: null
+  recorded_at: Fri, 14 May 2021 01:15:52 GMT
+recorded_with: VCR 5.1.0
