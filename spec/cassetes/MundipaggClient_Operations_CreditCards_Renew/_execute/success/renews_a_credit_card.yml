@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mundipagg.com/core/v1/customers/cus_rXZgoqjFwtj5GODx/cards/card_blRaGElCr5uQzD4N/renew
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: Ok
+    headers:
+      Date:
+      - Mon, 17 May 2021 14:39:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '54'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a1c5dba570000cf9aff058000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 650d98a3be90cf9a-FOR
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"id\": \"card_blRaGElCr5uQzD4N\"\r\n}"
+    http_version: null
+  recorded_at: Mon, 17 May 2021 14:39:38 GMT
+recorded_with: VCR 5.1.0
