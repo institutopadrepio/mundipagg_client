@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.mundipagg.com/core/v1/customers/cus_rXZgoqjFwtj5GODx/cards/card_blRaGElCr5uQzD4N
+    body:
+      encoding: UTF-8
+      string: '{"exp_month":"11","exp_year":"30","holder_name":"ANCHIETA SANTOS JUNIOR","holder_document":"35558757019"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 17 May 2021 17:09:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a1ce6b37c0000e08ee7ac5000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 650e73cbfb37e08e-FOR
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ew0KICAiaWQiOiAiY2FyZF9ibFJhR0VsQ3I1dVF6RDROIiwNCiAgImZpcnN0X3NpeF9kaWdpdHMiOiAiNDAwMDAwIiwNCiAgImxhc3RfZm91cl9kaWdpdHMiOiAiMDAxMCIsDQogICJicmFuZCI6ICJWaXNhIiwNCiAgImhvbGRlcl9uYW1lIjogIkFOQ0hJRVRBIFNBTlRPUyBKVU5JT1IiLA0KICAiaG9sZGVyX2RvY3VtZW50IjogIjM1NTU4NzU3MDE5IiwNCiAgImV4cF9tb250aCI6IDExLA0KICAiZXhwX3llYXIiOiAyMDMwLA0KICAic3RhdHVzIjogImFjdGl2ZSIsDQogICJ0eXBlIjogImNyZWRpdCIsDQogICJjcmVhdGVkX2F0IjogIjIwMjEtMDUtMTRUMTY6MTY6MDdaIiwNCiAgInVwZGF0ZWRfYXQiOiAiMjAyMS0wNS0xN1QxNzowOToxNFoiLA0KICAiY3VzdG9tZXIiOiB7DQogICAgImlkIjogImN1c19yWFpnb3FqRnd0ajVHT0R4IiwNCiAgICAibmFtZSI6ICJKb3PDqSBBbmNoaWV0YSBKdW5pb3IiLA0KICAgICJlbWFpbCI6ICJ6ZW1hcmlhQGVzY3JpdmEuY29tIiwNCiAgICAiZG9jdW1lbnQiOiAiMDM2ODk5OTQ1OTUiLA0KICAgICJ0eXBlIjogImluZGl2aWR1YWwiLA0KICAgICJkZWxpbnF1ZW50IjogZmFsc2UsDQogICAgImNyZWF0ZWRfYXQiOiAiMjAyMS0wNS0xM1QxNToxMTozMFoiLA0KICAgICJ1cGRhdGVkX2F0IjogIjIwMjEtMDUtMTRUMTM6MjE6MjRaIiwNCiAgICAicGhvbmVzIjoge30NCiAgfQ0KfQ==
+    http_version: null
+  recorded_at: Mon, 17 May 2021 17:09:14 GMT
+recorded_with: VCR 5.1.0
