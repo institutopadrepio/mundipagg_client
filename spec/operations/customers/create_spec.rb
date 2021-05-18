@@ -24,15 +24,15 @@ RSpec.describe MundipaggClient::Operations::Customers::Create do
 
       let(:expected_result) do
         {
-          "id"=>"cus_rXZgoqjFwtj5GODx",
-          "name"=>"Anchieta Junior",
-          "email"=>"zemaria@escriva.com",
-          "document"=>"03689994595",
-          "type"=>"individual",
-          "delinquent"=>false,
-          "created_at"=>"2021-05-13T15:11:30Z",
-          "updated_at"=>"2021-05-13T15:11:30Z",
-          "phones"=>{}
+          "id" => "cus_rXZgoqjFwtj5GODx",
+          "name" => "Anchieta Junior",
+          "email" => "zemaria@escriva.com",
+          "document" => "03689994595",
+          "type" => "individual",
+          "delinquent" => false,
+          "created_at" => "2021-05-13T15:11:30Z",
+          "updated_at" => "2021-05-13T15:11:30Z",
+          "phones" => {}
         }
       end
 

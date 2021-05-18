@@ -28,28 +28,28 @@ RSpec.describe MundipaggClient::Operations::CreditCards::Create do
 
       let(:expected_result) do
         {
-          "id"=>"card_blRaGElCr5uQzD4N",
-          "first_six_digits"=>"400000",
-          "last_four_digits"=>"0010",
-          "brand"=>"Visa",
-          "holder_name"=>"",
-          "holder_document"=>"35558757019",
-          "exp_month"=>10,
-          "exp_year"=>2030,
-          "status"=>"active",
-          "type"=>"credit",
-          "created_at"=>"2021-05-14T16:16:07Z",
-          "updated_at"=>"2021-05-14T16:16:07Z",
-          "customer"=> {
-            "id"=>"cus_rXZgoqjFwtj5GODx",
-            "name"=>"José Anchieta Junior",
-            "email"=>"zemaria@escriva.com",
-            "document"=>"03689994595",
-            "type"=>"individual",
-            "delinquent"=>false,
-            "created_at"=>"2021-05-13T15:11:30Z",
-            "updated_at"=>"2021-05-14T13:21:24Z",
-            "phones"=>{}
+          "id" => "card_blRaGElCr5uQzD4N",
+          "first_six_digits" => "400000",
+          "last_four_digits" => "0010",
+          "brand" => "Visa",
+          "holder_name" => "",
+          "holder_document" => "35558757019",
+          "exp_month" => 10,
+          "exp_year" => 2030,
+          "status" => "active",
+          "type" => "credit",
+          "created_at" => "2021-05-14T16:16:07Z",
+          "updated_at" => "2021-05-14T16:16:07Z",
+          "customer" => {
+            "id" => "cus_rXZgoqjFwtj5GODx",
+            "name" => "José Anchieta Junior",
+            "email" => "zemaria@escriva.com",
+            "document" => "03689994595",
+            "type" => "individual",
+            "delinquent" => false,
+            "created_at" => "2021-05-13T15:11:30Z",
+            "updated_at" => "2021-05-14T13:21:24Z",
+            "phones" => {}
           }
         }
       end
