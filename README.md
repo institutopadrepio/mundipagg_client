@@ -20,9 +20,54 @@ Or install it yourself as:
 
     $ gem install mundipagg_client
 
-## Usage
+## Operations
 
-TODO: Write usage instructions here
+Attributes and methods can be accessed like this:
+
+```ruby
+# Valid?
+operation.valid?
+
+# Result
+operation.result
+```
+
+### Customers
+
+Create, retrieve or update customers.
+
+#### Create
+
+```ruby
+operation = MundipaggClient::Operations::Customers::Create.run(
+    params: {
+        name: "Anchieta Junior",
+        email: "anchieta@junior.com",
+        document: "036.899.945-95"
+    }
+)
+```
+
+#### Retrieve
+
+```ruby
+operation = MundipaggClient::Operations::Customers::Retrieve.run(
+    customer_id: "cus_jahsdjhs"
+)
+```
+
+#### Update
+
+```ruby
+operation = MundipaggClient::Operations::Customers::Update.run(
+    customer_id: "cus_jahsdjhs",
+    params: {
+        name: "Anchieta Junior",
+        email: "anchieta@junior.com",
+        document: "036.899.945-95"
+    }
+)
+```
 
 ## Development
 

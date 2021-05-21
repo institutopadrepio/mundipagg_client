@@ -38,6 +38,7 @@ RSpec.describe MundipaggClient::Operations::Customers::Create do
 
       it "creates a customer on mundipagg" do
         expect(subject.result).to eq expected_result
+        expect(subject.valid?).to eq true
       end
     end
 
