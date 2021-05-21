@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mundipagg.com/core/v1/charges
+    body:
+      encoding: UTF-8
+      string: '{"amount":10000,"customer_id":"cus_rXZgoqjFwtj5GODx","payment":{"payment_method":"credit_card","credit_card":{"capture":true,"recurrence":true,"installments":1,"statement_descriptor":"Padre
+        Paulo Ricardo","card":{"number":"4000000000000010","holder_name":"Anchieta
+        S Junior","exp_month":"10","exp_year":"30","cvv":"123"}}}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 21 May 2021 14:06:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '785'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a30d8caca0000cf92b3bd6000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 652e5d8ad970cf92-FOR
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ew0KICAiaWQiOiAiY2hfRVdNVk9FdmkzWkZyeDBlZCIsDQogICJjb2RlIjogIk1KNVpTT0xBMU0iLA0KICAiYW1vdW50IjogMTAwMDAsDQogICJwYWlkX2Ftb3VudCI6IDEwMDAwLA0KICAic3RhdHVzIjogInBhaWQiLA0KICAiY3VycmVuY3kiOiAiQlJMIiwNCiAgInBheW1lbnRfbWV0aG9kIjogImNyZWRpdF9jYXJkIiwNCiAgInBhaWRfYXQiOiAiMjAyMS0wNS0yMVQxNDowNjoyN1oiLA0KICAiY3JlYXRlZF9hdCI6ICIyMDIxLTA1LTIxVDE0OjA2OjI3WiIsDQogICJ1cGRhdGVkX2F0IjogIjIwMjEtMDUtMjFUMTQ6MDY6MjdaIiwNCiAgImN1c3RvbWVyIjogew0KICAgICJpZCI6ICJjdXNfclhaZ29xakZ3dGo1R09EeCIsDQogICAgIm5hbWUiOiAiSm9zw6kgQW5jaGlldGEgSnVuaW9yIiwNCiAgICAiZW1haWwiOiAiemVtYXJpYUBlc2NyaXZhLmNvbSIsDQogICAgImRvY3VtZW50IjogIjAzNjg5OTk0NTk1IiwNCiAgICAidHlwZSI6ICJpbmRpdmlkdWFsIiwNCiAgICAiZGVsaW5xdWVudCI6IGZhbHNlLA0KICAgICJjcmVhdGVkX2F0IjogIjIwMjEtMDUtMTNUMTU6MTE6MzBaIiwNCiAgICAidXBkYXRlZF9hdCI6ICIyMDIxLTA1LTE0VDEzOjIxOjI0WiIsDQogICAgInBob25lcyI6IHt9DQogIH0sDQogICJsYXN0X3RyYW5zYWN0aW9uIjogew0KICAgICJvcGVyYXRpb25fa2V5IjogIjY1MDgyMzUyNDA1OTIiLA0KICAgICJpZCI6ICJ0cmFuX3hFZHdWcG1Ja0FJVjNxQVYiLA0KICAgICJ0cmFuc2FjdGlvbl90eXBlIjogImNyZWRpdF9jYXJkIiwNCiAgICAiZ2F0ZXdheV9pZCI6ICJiYTRkNDU4ZS05ZTYzLTQ2NTgtOTk1MC1jOGI0ZjgzY2E1YjMiLA0KICAgICJhbW91bnQiOiAxMDAwMCwNCiAgICAic3RhdHVzIjogImNhcHR1cmVkIiwNCiAgICAic3VjY2VzcyI6IHRydWUsDQogICAgImluc3RhbGxtZW50cyI6IDEsDQogICAgInN0YXRlbWVudF9kZXNjcmlwdG9yIjogIlBhZHJlIFBhdWxvIFJpY2FyZG8iLA0KICAgICJhY3F1aXJlcl9uYW1lIjogInNpbXVsYXRvciIsDQogICAgImFjcXVpcmVyX3RpZCI6ICIxMDU2NTM4MjI0NzEyMyIsDQogICAgImFjcXVpcmVyX25zdSI6ICI4OTkxOSIsDQogICAgImFjcXVpcmVyX2F1dGhfY29kZSI6ICIzODIiLA0KICAgICJhY3F1aXJlcl9tZXNzYWdlIjogIlRyYW5zYcOnw6NvIGNhcHR1cmFkYSBjb20gc3VjZXNzbyIsDQogICAgImFjcXVpcmVyX3JldHVybl9jb2RlIjogIjAwIiwNCiAgICAib3BlcmF0aW9uX3R5cGUiOiAiYXV0aF9hbmRfY2FwdHVyZSIsDQogICAgImNhcmQiOiB7DQogICAgICAiaWQiOiAiY2FyZF83cE1SbGpqQzlvaDM4UVpLIiwNCiAgICAgICJmaXJzdF9zaXhfZGlnaXRzIjogIjQwMDAwMCIsDQogICAgICAibGFzdF9mb3VyX2RpZ2l0cyI6ICIwMDEwIiwNCiAgICAgICJicmFuZCI6ICJWaXNhIiwNCiAgICAgICJob2xkZXJfbmFtZSI6ICJBbmNoaWV0YSBTIEp1bmlvciIsDQogICAgICAiZXhwX21vbnRoIjogMTAsDQogICAgICAiZXhwX3llYXIiOiAyMDMwLA0KICAgICAgInN0YXR1cyI6ICJhY3RpdmUiLA0KICAgICAgInR5cGUiOiAiY3JlZGl0IiwNCiAgICAgICJjcmVhdGVkX2F0IjogIjIwMjEtMDUtMjFUMTQ6MDY6MjdaIiwNCiAgICAgICJ1cGRhdGVkX2F0IjogIjIwMjEtMDUtMjFUMTQ6MDY6MjdaIg0KICAgIH0sDQogICAgImNyZWF0ZWRfYXQiOiAiMjAyMS0wNS0yMVQxNDowNjoyN1oiLA0KICAgICJ1cGRhdGVkX2F0IjogIjIwMjEtMDUtMjFUMTQ6MDY6MjdaIiwNCiAgICAiZ2F0ZXdheV9yZXNwb25zZSI6IHsNCiAgICAgICJjb2RlIjogIjIwMCIsDQogICAgICAiZXJyb3JzIjogW10NCiAgICB9LA0KICAgICJhbnRpZnJhdWRfcmVzcG9uc2UiOiB7fSwNCiAgICAibWV0YWRhdGEiOiB7fQ0KICB9DQp9
+    http_version: null
+  recorded_at: Fri, 21 May 2021 14:06:27 GMT
+recorded_with: VCR 5.1.0

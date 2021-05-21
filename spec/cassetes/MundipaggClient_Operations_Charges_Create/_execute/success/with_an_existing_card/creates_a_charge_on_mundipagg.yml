@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mundipagg.com/core/v1/charges
+    body:
+      encoding: UTF-8
+      string: '{"amount":1000,"customer_id":"cus_rXZgoqjFwtj5GODx","payment":{"payment_method":"credit_card","credit_card":{"capture":true,"recurrence":true,"installments":1,"statement_descriptor":"Padre
+        Paulo Ricardo","card_id":"card_ZeL9P5mUp1CBPWB1"}}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 21 May 2021 16:58:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '784'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a31767a240000cf96d3386000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 652f59d69da9cf96-FOR
+    body:
+      encoding: ASCII-8BIT
+      string: "{\r\n  \"id\": \"ch_6kXzjq3IdUmDrdaL\",\r\n  \"code\": \"651MTWARGY\",\r\n  \"amount\": 1000,\r\n  \"status\": \"paid\",\r\n  \"currency\": \"BRL\",\r\n  \"payment_method\": \"credit_card\",\r\n  \"created_at\": \"2021-05-21T16:58:41Z\",\r\n  \"updated_at\": \"2021-05-21T16:58:42Z\",\r\n  \"customer\": {\r\n    \"id\": \"cus_rXZgoqjFwtj5GODx\",\r\n    \"name\": \"José Anchieta Junior\",\r\n    \"email\": \"zemaria@escriva.com\",\r\n    \"document\": \"03689994595\",\r\n    \"type\": \"individual\",\r\n    \"delinquent\": false,\r\n    \"created_at\": \"2021-05-13T15:11:30Z\",\r\n    \"updated_at\": \"2021-05-14T13:21:24Z\",\r\n    \"phones\": {}\r\n  },\r\n  \"last_transaction\": {\r\n    \"operation_key\": \"4791373733800\",\r\n    \"id\": \"tran_KY95ErsZqH7JMlxz\",\r\n    \"transaction_type\": \"credit_card\",\r\n    \"gateway_id\": \"c4cc6ef7-5d4e-4beb-9380-fa1a86ab7da0\",\r\n    \"amount\": 1000,\r\n    \"status\": \"captured\",\r\n    \"success\": false,\r\n    \"installments\": 4,\r\n    \"statement_descriptor\": \"Padre Paulo Ricardo\",\r\n    \"acquirer_name\": \"simulator\",\r\n    \"acquirer_tid\": \"83078929541204\",\r\n    \"acquirer_nsu\": \"75280\",\r\n    \"acquirer_message\": \"Transação não autorizada\",\r\n    \"acquirer_return_code\": \"01\",\r\n    \"operation_type\": \"auth_and_capture\",\r\n    \"card\": {\r\n      \"id\": \"card_ZeL9P5mUp1CBPWB1\",\r\n      \"first_six_digits\": \"4000 0\",\r\n      \"last_four_digits\": \"0010\",\r\n      \"brand\": \"Visa\",\r\n      \"holder_name\": \"Anchieta S Junior\",\r\n      \"exp_month\": 10,\r\n      \"exp_year\": 2030,\r\n      \"status\": \"active\",\r\n      \"type\": \"credit\",\r\n      \"created_at\": \"2021-05-21T13:56:39Z\",\r\n      \"updated_at\": \"2021-05-21T13:56:39Z\"\r\n    },\r\n    \"created_at\": \"2021-05-21T16:58:41Z\",\r\n    \"updated_at\": \"2021-05-21T16:58:41Z\",\r\n    \"gateway_response\": {\r\n      \"code\": \"200\",\r\n      \"errors\": []\r\n    },\r\n    \"antifraud_response\": {},\r\n    \"metadata\": {}\r\n  }\r\n}"
+    http_version: null
+  recorded_at: Fri, 21 May 2021 16:58:42 GMT
+recorded_with: VCR 5.1.0
