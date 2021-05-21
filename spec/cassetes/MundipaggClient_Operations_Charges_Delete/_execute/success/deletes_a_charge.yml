@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.mundipagg.com/core/v1/charges/ch_EWMVOEvi3ZFrx0ed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 21 May 2021 17:09:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '785'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 0a3180a0590000e08e9f0ad000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 652f6a13be21e08e-FOR
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ew0KICAiaWQiOiAiY2hfRVdNVk9FdmkzWkZyeDBlZCIsDQogICJjb2RlIjogIk1KNVpTT0xBMU0iLA0KICAiYW1vdW50IjogMTAwMDAsDQogICJwYWlkX2Ftb3VudCI6IDEwMDAwLA0KICAiY2FuY2VsZWRfYW1vdW50IjogMTAwMDAsDQogICJzdGF0dXMiOiAiY2FuY2VsZWQiLA0KICAiY3VycmVuY3kiOiAiQlJMIiwNCiAgInBheW1lbnRfbWV0aG9kIjogImNyZWRpdF9jYXJkIiwNCiAgInBhaWRfYXQiOiAiMjAyMS0wNS0yMVQxNDowNjoyN1oiLA0KICAiY2FuY2VsZWRfYXQiOiAiMjAyMS0wNS0yMVQxNzowOTo0NloiLA0KICAiY3JlYXRlZF9hdCI6ICIyMDIxLTA1LTIxVDE0OjA2OjI3WiIsDQogICJ1cGRhdGVkX2F0IjogIjIwMjEtMDUtMjFUMTc6MDk6NDZaIiwNCiAgImN1c3RvbWVyIjogew0KICAgICJpZCI6ICJjdXNfclhaZ29xakZ3dGo1R09EeCIsDQogICAgIm5hbWUiOiAiSm9zw6kgQW5jaGlldGEgSnVuaW9yIiwNCiAgICAiZW1haWwiOiAiemVtYXJpYUBlc2NyaXZhLmNvbSIsDQogICAgImRvY3VtZW50IjogIjAzNjg5OTk0NTk1IiwNCiAgICAidHlwZSI6ICJpbmRpdmlkdWFsIiwNCiAgICAiZGVsaW5xdWVudCI6IGZhbHNlLA0KICAgICJjcmVhdGVkX2F0IjogIjIwMjEtMDUtMTNUMTU6MTE6MzBaIiwNCiAgICAidXBkYXRlZF9hdCI6ICIyMDIxLTA1LTE0VDEzOjIxOjI0WiIsDQogICAgInBob25lcyI6IHt9DQogIH0sDQogICJsYXN0X3RyYW5zYWN0aW9uIjogew0KICAgICJvcGVyYXRpb25fa2V5IjogIjkzNzY2NjU4MDk4MzMiLA0KICAgICJpZCI6ICJ0cmFuX2drN1ZBdmRhQ2VzbndFNDEiLA0KICAgICJ0cmFuc2FjdGlvbl90eXBlIjogImNyZWRpdF9jYXJkIiwNCiAgICAiYW1vdW50IjogMTAwMDAsDQogICAgInN0YXR1cyI6ICJyZWZ1bmRlZCIsDQogICAgInN1Y2Nlc3MiOiB0cnVlLA0KICAgICJpbnN0YWxsbWVudHMiOiAxLA0KICAgICJzdGF0ZW1lbnRfZGVzY3JpcHRvciI6ICJQYWRyZSBQYXVsbyBSaWNhcmRvIiwNCiAgICAiYWNxdWlyZXJfbmFtZSI6ICJzaW11bGF0b3IiLA0KICAgICJhY3F1aXJlcl90aWQiOiAiN2RiOTZmOGYtMWJkMy00NjE1LTg1YzUtYjg0ZWY3ODg3ODkwIiwNCiAgICAiYWNxdWlyZXJfbnN1IjogIjg5OTE5IiwNCiAgICAiYWNxdWlyZXJfYXV0aF9jb2RlIjogIjM4MiIsDQogICAgImFjcXVpcmVyX21lc3NhZ2UiOiAiVHJhbnNhw6fDo28gY2FuY2VsYWRhIGNvbSBzdWNlc3NvIiwNCiAgICAiYWNxdWlyZXJfcmV0dXJuX2NvZGUiOiAiMDAiLA0KICAgICJvcGVyYXRpb25fdHlwZSI6ICJjYW5jZWwiLA0KICAgICJjYXJkIjogew0KICAgICAgImlkIjogImNhcmRfN3BNUmxqakM5b2gzOFFaSyIsDQogICAgICAiZmlyc3Rfc2l4X2RpZ2l0cyI6ICI0MDAwMDAiLA0KICAgICAgImxhc3RfZm91cl9kaWdpdHMiOiAiMDAxMCIsDQogICAgICAiYnJhbmQiOiAiVmlzYSIsDQogICAgICAiaG9sZGVyX25hbWUiOiAiQW5jaGlldGEgUyBKdW5pb3IiLA0KICAgICAgImV4cF9tb250aCI6IDEwLA0KICAgICAgImV4cF95ZWFyIjogMjAzMCwNCiAgICAgICJzdGF0dXMiOiAiYWN0aXZlIiwNCiAgICAgICJ0eXBlIjogImNyZWRpdCIsDQogICAgICAiY3JlYXRlZF9hdCI6ICIyMDIxLTA1LTIxVDE0OjA2OjI3WiIsDQogICAgICAidXBkYXRlZF9hdCI6ICIyMDIxLTA1LTIxVDE0OjA2OjI3WiINCiAgICB9LA0KICAgICJjcmVhdGVkX2F0IjogIjIwMjEtMDUtMjFUMTc6MDk6NDZaIiwNCiAgICAidXBkYXRlZF9hdCI6ICIyMDIxLTA1LTIxVDE3OjA5OjQ2WiIsDQogICAgImdhdGV3YXlfcmVzcG9uc2UiOiB7DQogICAgICAiY29kZSI6ICIyMDAiLA0KICAgICAgImVycm9ycyI6IFtdDQogICAgfSwNCiAgICAiYW50aWZyYXVkX3Jlc3BvbnNlIjoge30sDQogICAgIm1ldGFkYXRhIjoge30NCiAgfQ0KfQ==
+    http_version: null
+  recorded_at: Fri, 21 May 2021 17:09:46 GMT
+recorded_with: VCR 5.1.0
