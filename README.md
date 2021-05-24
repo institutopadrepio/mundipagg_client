@@ -69,6 +69,102 @@ operation = MundipaggClient::Operations::Customers::Update.run(
 )
 ```
 
+### Credit Cards
+
+Create, retrieve, update or delete credit cards.
+
+#### Create
+
+```ruby
+operation = MundipaggClient::Operations::CreditCards::Create.run(
+    params: {
+        number: "4000 0000 0000 0010",
+        exp_month: "10",
+        exp_year: "30",
+        cvv: "123",
+        holder_name: "Anchieta S Junior",
+        holder_document: "355.587.570-19"
+    }
+)
+```
+
+#### Retrieve
+
+```ruby
+operation = MundipaggClient::Operations::CreditCards::Retrieve.run(
+    customer_id: "card_blRaGElCr5uQzD4N"
+)
+```
+
+#### Update
+
+```ruby
+operation = MundipaggClient::Operations::CreditCards::Update.run(
+    customer_id: "card_blRaGElCr5uQzD4N",
+    params: {
+      exp_month: "10",
+      exp_year: "30",
+      holder_name: "Anchieta S Junior",
+      holder_document: "355.587.570-19"
+    }
+)
+```
+
+#### Delete
+
+```ruby
+operation = MundipaggClient::Operations::CreditCards::Delete.run(
+    customer_id: "card_blRaGElCr5uQzD4N"
+)
+```
+
+### Charges
+
+Create or delete (refund) charges.
+
+#### Create a charge with a new credit card
+
+```ruby
+operation = MundipaggClient::Operations::Charges::Create.run(
+    params: {
+        amount: 10000,
+        customer_id: "cus_rXZgoqjFwtj5GODx",
+        statement_descriptor: "Padre Paulo Ricardo",
+        card_number: "4000000000000010",
+        card_exp_month: "10",
+        card_exp_year: "30",
+        card_cvv: "123",
+        card_holder_name: "Anchieta S Junior",
+        card_holder_document: "355.587.570-19"
+    }
+)
+```
+
+#### Create a charge with an existing credit card
+
+```ruby
+operation = MundipaggClient::Operations::Charges::Create.run(
+    params: {
+        amount: 1000,
+        customer_id: "card_ZeL9P5mUp1CBPWB1",
+        statement_descriptor: "Padre Paulo Ricardo",
+        installments: 1,
+        card_id: "card_ZeL9P5mUp1CBPWB1"
+    }
+)
+```
+
+#### Delete
+
+```ruby
+operation = MundipaggClient::Operations::Charges::Delete.run(
+    charge_id: "ch_blRaGElCr5uQzD4N"
+)
+```
+
+
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
