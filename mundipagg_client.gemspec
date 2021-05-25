@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake",    "~> 12.3.3"
   spec.add_development_dependency "rspec",   "~> 3.7"
   spec.add_runtime_dependency "active_interaction", "~> 4.0"
+  spec.add_runtime_dependency "require_all"
   spec.add_dependency "excon", ">= 0.73.0"
   spec.add_dependency "faraday"
   spec.add_development_dependency "vcr",     "~> 5.1"
