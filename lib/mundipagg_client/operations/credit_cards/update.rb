@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "pry"
-
 module MundipaggClient
   module Operations
     module CreditCards
@@ -16,7 +14,6 @@ module MundipaggClient
         end
 
         def execute
-          # binding.pry
           raise "Invalid Mundipagg operation" unless request.success?
 
           JSON.parse(request.body)
