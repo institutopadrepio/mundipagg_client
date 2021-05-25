@@ -7,7 +7,7 @@ RSpec.describe MundipaggClient::Operations::CreditCards::Create do
   describe "#execute", vcr: true do
     before(:each) do
       MundipaggClient::MundipaggClientConfiguration.configure do |config|
-        config.api_key = "sk_test_XKYQWVbUYrfK8E2A"
+        config.api_key = "sk_test_123"
       end
     end
 
