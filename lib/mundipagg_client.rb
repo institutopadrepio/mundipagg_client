@@ -2,11 +2,7 @@
 
 require "require_all"
 require "active_interaction"
-require "mundipagg_client/mundipagg_base"
-require "mundipagg_client/configuration"
-require_all "lib/mundipagg_client/operations"
-
-require_relative "mundipagg_client/version"
+require_all "./lib/mundipagg_client"
 
 module MundipaggClient
   class MundipaggClientConfiguration
