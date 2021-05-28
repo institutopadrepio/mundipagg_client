@@ -7,7 +7,7 @@ module MundipaggClient
         hash :params do
           string :name
           string :email
-          string :document
+          string :document, default: nil
         end
 
         def execute
