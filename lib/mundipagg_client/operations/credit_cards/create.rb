@@ -11,7 +11,7 @@ module MundipaggClient
           string :exp_year
           string :cvv
           string :holder_name
-          string :holder_document
+          string :holder_document, default: nil
         end
 
         def execute
