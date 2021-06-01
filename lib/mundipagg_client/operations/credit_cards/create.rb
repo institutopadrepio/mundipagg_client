@@ -34,8 +34,8 @@ module MundipaggClient
             exp_month: params[:exp_month],
             exp_year: params[:exp_year],
             cvv: params[:cvv],
-            holder_name: sanitize_names(params[:holder_document]),
-            holder_document: (params[:holder_document] != nil ? sanitize_numbers(params[:holder_document]) : nil)
+            holder_name: sanitize_names(params[:holder_name]),
+            holder_document: (params[:holder_document] == nil ? nil : sanitize_numbers(params[:holder_document]))
           }
         end
       end
