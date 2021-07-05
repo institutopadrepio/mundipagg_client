@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.mundipagg.com/core/v1/charges/ch_mBXQJ1miEiaJ2kjP
+    body:
+      encoding: UTF-8
+      string: '{"amount":100}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.4
+      Authorization:
+      - Basic c2tfdGVzdF9YS1lRV1ZiVVlyZks4RTJBOg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 05 Jul 2021 11:52:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '51'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66a063604cdfeece-GRU
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"id\": \"ch_mBXQJ1miEiaJ2kjP\",\r\n  \"canceled_amount\": 100, \r\n  \"last_transaction\": {\r\n  \"status\":\r\n  \"refunded\"\r\n }\r\n }"
+    http_version:
+  recorded_at: Mon, 05 Jul 2021 11:52:37 GMT
+recorded_with: VCR 5.1.0
