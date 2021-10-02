@@ -28,7 +28,7 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
             card_holder_document: "355.587.570-19"
           }
         end
-  
+
         it "creates a charge with a new credit card on mundipagg" do
           expect(subject.result["status"]).to eq "paid"
           expect(subject.result["last_transaction"]["installments"]).to eq 1
@@ -69,7 +69,10 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
       end
 
       it "raises an Invalid Mundipagg Operation error" do
-        expect { subject }.to raise_error("Invalid Mundipagg operation")
+        expect { subject }.to raise_error(
+          RuntimeError,
+          "MundipaggClientError on charge_create, message: Customer not found., id: card_123123"
+        )
       end
     end
   end

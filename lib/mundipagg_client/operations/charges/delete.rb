@@ -4,11 +4,13 @@ module MundipaggClient
   module Operations
     module Charges
       class Delete < MundipaggClient::MundipaggBase
+        OPERATION_TYPE = "charge_refund"
+
         string :charge_id
         integer :amount, default: nil
 
         def execute
-          raise "Invalid Mundipagg operation" unless request.success?
+          raise request_error_message(request, OPERATION_TYPE, charge_id) unless request.success?
 
           JSON.parse(request.body)
         end

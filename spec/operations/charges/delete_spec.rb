@@ -39,7 +39,10 @@ RSpec.describe MundipaggClient::Operations::Charges::Delete do
       let(:charge_id) { "ch_1726387126" }
 
       it "raises an invalid Mundipagg operation error" do
-        expect { subject }.to raise_error("Invalid Mundipagg operation")
+        expect { subject }.to raise_error(
+          RuntimeError,
+          "MundipaggClientError on charge_refund, message: Charge not found., id: ch_1726387126"
+        )
       end
     end
   end

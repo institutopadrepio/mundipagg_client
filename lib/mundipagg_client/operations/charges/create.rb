@@ -4,6 +4,8 @@ module MundipaggClient
   module Operations
     module Charges
       class Create < MundipaggClient::MundipaggBase
+        OPERATION_TYPE = "charge_create"
+
         hash :params do
           integer :amount
           string :customer_id
@@ -19,7 +21,7 @@ module MundipaggClient
         end
 
         def execute
-          raise "Invalid Mundipagg operation" unless request.success?
+          raise request_error_message(request, OPERATION_TYPE, params[:customer_id]) unless request.success?
 
           JSON.parse(request.body)
         end
