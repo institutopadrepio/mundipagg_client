@@ -55,7 +55,10 @@ RSpec.describe MundipaggClient::Operations::CreditCards::Retrieve do
       let(:card_id) { "card_heuaheua" }
 
       it "returns nil when no customer was found" do
-        expect { subject }.to raise_error("Invalid Mundipagg operation")
+        expect { subject }.to raise_error(
+          RuntimeError,
+          "MundipaggClientError on credit_card_retrieve, message: Card not found., id: card_heuaheua"
+        )
       end
     end
   end

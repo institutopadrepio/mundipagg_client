@@ -14,7 +14,7 @@ module MundipaggClient
 
     def build_connection
       connection = Faraday.new(headers: headers)
-      connection.basic_auth(MundipaggClient::MundipaggClientConfiguration.configuration.api_key, '')
+      connection.basic_auth(MundipaggClient::MundipaggClientConfiguration.configuration.api_key, "")
       connection
     end
 
@@ -30,6 +30,11 @@ module MundipaggClient
       from = "àáäâãèéëẽêìíïîĩòóöôõùúüûũñçñÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜÑÇ"
       to = "aaaaaeeeeeiiiiiooooouuuuuncnAAAAAEEEEIIIIOOOOOUUUUNC"
       name.gsub(/[#{from}]/, from.split("").zip(to.split("")).to_h).gsub(/[^A-Z a-z]/, "").upcase
+    end
+
+    def request_error_message(request, operation_type, id = nil)
+      # MundipaggClientError on operation_type, message: something, id: id
+      "MundipaggClientError on #{operation_type}, message: #{JSON.parse(request.body)["message"]}, id: #{id}"
     end
   end
 end

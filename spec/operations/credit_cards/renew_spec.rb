@@ -19,7 +19,7 @@ RSpec.describe MundipaggClient::Operations::CreditCards::Renew do
 
       let(:expected_result) do
         {
-          "id"=>"card_blRaGElCr5uQzD4N"
+          "id": "card_blRaGElCr5uQzD4N"
         }
       end
 
@@ -33,7 +33,10 @@ RSpec.describe MundipaggClient::Operations::CreditCards::Renew do
       let(:card_id) { "card_heuaheua" }
 
       it "returns nil when no customer was found" do
-        expect { subject }.to raise_error("Invalid Mundipagg operation")
+        expect { subject }.to raise_error(
+          RuntimeError,
+          "MundipaggClientError on credit_card_renew, message: Manual card renew is not enabled., id: card_heuaheua"
+        )
       end
     end
   end

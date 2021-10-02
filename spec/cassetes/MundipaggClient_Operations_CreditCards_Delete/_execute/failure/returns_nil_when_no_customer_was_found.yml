@@ -23,7 +23,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Mon, 17 May 2021 17:32:40 GMT
+      - Sat, 02 Oct 2021 13:25:42 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -40,17 +40,15 @@ http_interactions:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 0a1cfc27930000e07c8433b000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 650e961f4929e07c-FOR
+      - 697e421c5e20f1ea-GRU
     body:
       encoding: UTF-8
       string: "{\r\n  \"message\": \"Card not found.\"\r\n}"
-    http_version: null
-  recorded_at: Mon, 17 May 2021 17:32:40 GMT
+    http_version:
+  recorded_at: Sat, 02 Oct 2021 13:25:41 GMT
 recorded_with: VCR 5.1.0

@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
+require 'pry'
+
 module MundipaggClient
   module Operations
     module CreditCards
       class Create < MundipaggClient::MundipaggBase
+        OPERATION_TYPE = "credit_card_create"
+
         string :customer_id
         hash :params do
           string :number
@@ -15,7 +19,7 @@ module MundipaggClient
         end
 
         def execute
-          raise "Invalid Mundipagg operation" unless request.success?
+          raise request_error_message(request, OPERATION_TYPE, customer_id) unless request.success?
 
           JSON.parse(request.body)
         end
@@ -35,7 +39,7 @@ module MundipaggClient
             exp_year: params[:exp_year],
             cvv: params[:cvv],
             holder_name: sanitize_names(params[:holder_name]),
-            holder_document: (params[:holder_document] == nil ? nil : sanitize_numbers(params[:holder_document]))
+            holder_document: (params[:holder_document].nil? ? nil : sanitize_numbers(params[:holder_document]))
           }
         end
       end

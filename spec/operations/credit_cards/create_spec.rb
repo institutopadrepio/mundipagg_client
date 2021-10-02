@@ -73,7 +73,10 @@ RSpec.describe MundipaggClient::Operations::CreditCards::Create do
       end
 
       it "raises an Invalid Mundipagg Operation error" do
-        expect { subject }.to raise_error("Invalid Mundipagg operation")
+        # MundipaggClientError on operation_type, message: something, id: id
+        expect { subject }.to raise_error(
+          "MundipaggClientError on credit_card_create, message: Customer not found, id: cus_akjshdjkahskdhj"
+        )
       end
     end
   end

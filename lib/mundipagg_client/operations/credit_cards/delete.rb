@@ -4,11 +4,13 @@ module MundipaggClient
   module Operations
     module CreditCards
       class Delete < MundipaggClient::MundipaggBase
+        OPERATION_TYPE = "credit_card_delete"
+
         string :customer_id
         string :card_id
 
         def execute
-          raise "Invalid Mundipagg operation" unless request.success?
+          raise request_error_message(request, OPERATION_TYPE, card_id) unless request.success?
 
           JSON.parse(request.body)
         end
