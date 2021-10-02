@@ -52,7 +52,10 @@ RSpec.describe MundipaggClient::Operations::Customers::Create do
       end
 
       it "raises an Invalid Mundipagg Operation error" do
-        expect { subject }.to raise_error("Invalid Mundipagg operation")
+        expect { subject }.to raise_error(
+          RuntimeError,
+          "MundipaggClientError on customer_create, message: The request is invalid."
+        )
       end
     end
   end

@@ -39,7 +39,10 @@ RSpec.describe MundipaggClient::Operations::Customers::Retrieve do
       let(:customer_id) { "cus_ahsdjgasdhgh" }
 
       it "returns nil when no customer was found" do
-        expect { subject }.to raise_error("Invalid Mundipagg operation")
+        expect { subject }.to raise_error(
+          RuntimeError,
+          "MundipaggClientError on customer_retrieve, message: Customer not found., id: cus_ahsdjgasdhgh"
+        )
       end
     end
   end

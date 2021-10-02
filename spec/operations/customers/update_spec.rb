@@ -53,7 +53,10 @@ RSpec.describe MundipaggClient::Operations::Customers::Update do
       end
 
       it "raises an Invalid Mundipagg Operation error" do
-        expect { subject }.to raise_error("Invalid Mundipagg operation")
+        expect { subject }.to raise_error(
+          RuntimeError,
+          "MundipaggClientError on customer_update, message: The request is invalid., id: cus_heauheUAHEuah"
+        )
       end
     end
   end

@@ -4,10 +4,12 @@ module MundipaggClient
   module Operations
     module Customers
       class Retrieve < MundipaggClient::MundipaggBase
+        OPERATION_TYPE = "customer_retrieve"
+
         string :customer_id
 
         def execute
-          raise "Invalid Mundipagg operation" unless request.success?
+          raise request_error_message(request, OPERATION_TYPE, customer_id) unless request.success?
 
           JSON.parse(request.body)
         end

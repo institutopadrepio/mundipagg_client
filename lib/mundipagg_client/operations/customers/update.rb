@@ -4,6 +4,8 @@ module MundipaggClient
   module Operations
     module Customers
       class Update < MundipaggClient::MundipaggBase
+        OPERATION_TYPE = "customer_update"
+
         string :customer_id
         hash :params do
           string :name
@@ -12,7 +14,7 @@ module MundipaggClient
         end
 
         def execute
-          raise "Invalid Mundipagg operation" unless request.success?
+          raise request_error_message(request, OPERATION_TYPE, customer_id) unless request.success?
 
           JSON.parse(request.body)
         end

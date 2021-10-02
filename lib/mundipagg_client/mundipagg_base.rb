@@ -33,8 +33,8 @@ module MundipaggClient
     end
 
     def request_error_message(request, operation_type, id = nil)
-      # MundipaggClientError on operation_type, message: something, id: id
-      "MundipaggClientError on #{operation_type}, message: #{JSON.parse(request.body)["message"]}, id: #{id}"
+      "MundipaggClientError on #{operation_type}, message: #{JSON.parse(request.body)["message"]}"\
+      "#{id.present? ? ", id: #{id}" : ""}"
     end
   end
 end
