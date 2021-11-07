@@ -10,7 +10,7 @@ module MundipaggClient
           integer :amount
           string :customer_id
           # Payment type options accepted: credit_card or pix
-          string :payment_type
+          string :payment_type, default: "credit_card"
           string :card_id, default: nil
           string :statement_descriptor
           integer :installments, default: 1
