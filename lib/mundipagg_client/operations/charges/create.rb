@@ -9,6 +9,8 @@ module MundipaggClient
         hash :params do
           integer :amount
           string :customer_id
+          # Payment type options accepted: credit_card or pix
+          string :payment_type
           string :card_id, default: nil
           string :statement_descriptor
           integer :installments, default: 1
@@ -21,12 +23,26 @@ module MundipaggClient
         end
 
         def execute
-          raise request_error_message(request, OPERATION_TYPE, params[:customer_id]) unless request.success?
+          unless request.success?
+            raise request_error_message(
+              request,
+              OPERATION_TYPE,
+              params[:customer_id]
+            )
+          end
 
           JSON.parse(request.body)
         end
 
         private
+
+        def credit_card?
+          params[:payment_type] == "credit_card"
+        end
+
+        def pix?
+          params[:payment_type] == "pix"
+        end
 
         def request
           @request ||= connection.post("#{BASE_URL}/charges") do |req|
@@ -38,24 +54,32 @@ module MundipaggClient
           {}.tap do |hash|
             hash[:amount] = params[:amount]
             hash[:customer_id] = params[:customer_id]
-            payment_params(hash)
-            credit_card_params(hash)
+            credit_card_params(hash) if credit_card?
+            pix_params(hash) if pix?
           end
         end
 
-        def payment_params(hash)
-          hash[:payment] = {
-            payment_method: "credit_card",
-            credit_card: {
-              capture: true,
-              recurrence: true,
-              installments: params[:installments],
-              statement_descriptor: params[:statement_descriptor]
-            }
+        def pix_params(hash)
+          hash[:payment][:payment_method] = "pix"
+          hash[:payment][:pix] = {
+            "expires_in": "259200", # 3 days in seconds
+            "additional_information": [
+              {
+                "name": "Quantidade",
+                "value": "2"
+              }
+            ]
           }
         end
 
         def credit_card_params(hash)
+          hash[:payment][:payment_type] = "credit_card"
+          hash[:payment][:credit_card] = {
+            capture: true,
+            recurrence: true,
+            installments: params[:installments],
+            statement_descriptor: params[:statement_descriptor]
+          }
           if params[:card_id].present?
             hash[:payment][:credit_card][:card_id] = params[:card_id]
           else
