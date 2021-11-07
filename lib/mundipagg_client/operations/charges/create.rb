@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "pry"
+
 module MundipaggClient
   module Operations
     module Charges
@@ -23,6 +25,7 @@ module MundipaggClient
         end
 
         def execute
+          binding.pry
           unless request.success?
             raise request_error_message(
               request,
@@ -54,13 +57,15 @@ module MundipaggClient
           {}.tap do |hash|
             hash[:amount] = params[:amount]
             hash[:customer_id] = params[:customer_id]
+            hash[:payment] = {}
+            hash[:payment][:payment_type] = params[:payment_type]
+            p "Passou daqui"
             credit_card_params(hash) if credit_card?
             pix_params(hash) if pix?
           end
         end
 
         def pix_params(hash)
-          hash[:payment][:payment_method] = "pix"
           hash[:payment][:pix] = {
             "expires_in": "259200", # 3 days in seconds
             "additional_information": [
@@ -73,7 +78,6 @@ module MundipaggClient
         end
 
         def credit_card_params(hash)
-          hash[:payment][:payment_type] = "credit_card"
           hash[:payment][:credit_card] = {
             capture: true,
             recurrence: true,
