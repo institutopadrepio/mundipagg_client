@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "pry"
-
 module MundipaggClient
   module Operations
     module Charges
@@ -25,7 +23,6 @@ module MundipaggClient
         end
 
         def execute
-          binding.pry
           unless request.success?
             raise request_error_message(
               request,
@@ -59,7 +56,6 @@ module MundipaggClient
             hash[:customer_id] = params[:customer_id]
             hash[:payment] = {}
             hash[:payment][:payment_type] = params[:payment_type]
-            p "Passou daqui"
             credit_card_params(hash) if credit_card?
             pix_params(hash) if pix?
           end
