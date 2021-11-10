@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'pry'
 
 module MundipaggClient
   module Operations
@@ -12,7 +13,7 @@ module MundipaggClient
           # Payment type options accepted: credit_card or pix
           string :payment_type, default: "credit_card"
           string :card_id, default: nil
-          string :statement_descriptor
+          string :statement_descriptor, default: nil
           integer :installments, default: 1
           string :card_number, default: nil
           string :card_holder_name, default: nil
@@ -20,6 +21,7 @@ module MundipaggClient
           string :card_exp_year, default: nil
           string :card_cvv, default: nil
           string :card_cvv, default: nil
+          array :additional_information, default: nil
         end
 
         def execute
@@ -55,22 +57,38 @@ module MundipaggClient
             hash[:amount] = params[:amount]
             hash[:customer_id] = params[:customer_id]
             hash[:payment] = {}
-            hash[:payment][:payment_type] = params[:payment_type]
+            hash[:payment][:payment_method] = params[:payment_type]
             credit_card_params(hash) if credit_card?
             pix_params(hash) if pix?
+            additional_information(hash) if pix? && additional_information?
           end
         end
 
         def pix_params(hash)
           hash[:payment][:pix] = {
-            "expires_in": "259200", # 3 days in seconds
-            "additional_information": [
-              {
-                "name": "Quantidade",
-                "value": "2"
-              }
-            ]
+            expires_in: "259200" # 3 days in seconds
           }
+        end
+
+        def additional_information(hash)
+          hash[:payment][:pix][:additional_information] = [
+            {
+              name: additional_information? ? additional_information_label : "",
+              value: additional_information? ? additional_information_value : ""
+            }
+          ]
+        end
+
+        def additional_information?
+          params[:additional_information].present?
+        end
+
+        def additional_information_label
+          params[:additional_information].first
+        end
+
+        def additional_information_value
+          params[:additional_information].last
         end
 
         def credit_card_params(hash)
