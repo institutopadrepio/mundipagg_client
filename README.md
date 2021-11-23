@@ -120,11 +120,13 @@ operation = MundipaggClient::Operations::CreditCards::Delete.run(
 
 ### Charges
 
-Create or delete (refund) charges.
-
 Quick note: If you don't pass the payment_type parameter, automatically the client will set it to credit card.
 
-#### Create a charge with a new credit card
+#### Credit Card
+
+Create or delete (refund) charges.
+
+##### Create a charge with a new credit card
 
 ```ruby
 operation = MundipaggClient::Operations::Charges::Create.run(
@@ -142,7 +144,7 @@ operation = MundipaggClient::Operations::Charges::Create.run(
 )
 ```
 
-#### Create a charge with an existing credit card
+##### Create a charge with an existing credit card
 
 ```ruby
 operation = MundipaggClient::Operations::Charges::Create.run(
@@ -156,7 +158,7 @@ operation = MundipaggClient::Operations::Charges::Create.run(
 )
 ```
 
-#### Delete
+##### Delete (Refund)
 
 ```ruby
 operation = MundipaggClient::Operations::Charges::Delete.run(
@@ -164,11 +166,11 @@ operation = MundipaggClient::Operations::Charges::Delete.run(
 )
 ```
 
-### Pix
+#### Pix
 
 Create transactions using Pix
 
-#### Create
+##### Create
 
 ```ruby
 operation = MundipaggClient::Operations::Charges::Create.run(
