@@ -24,7 +24,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 21 May 2021 17:02:39 GMT
+      - Tue, 23 Nov 2021 18:31:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -41,17 +41,15 @@ http_interactions:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 0a317a19870000e07c2fbfa000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 652f5fa26dc3e07c-FOR
+      - 6b2c79fdcc296ae8-GRU
     body:
       encoding: UTF-8
       string: "{\r\n  \"message\": \"Customer not found.\"\r\n}"
-    http_version: null
-  recorded_at: Fri, 21 May 2021 17:02:38 GMT
+    http_version:
+  recorded_at: Tue, 23 Nov 2021 18:31:46 GMT
 recorded_with: VCR 5.1.0

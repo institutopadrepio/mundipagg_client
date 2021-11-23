@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.mundipagg.com/core/v1/charges
     body:
       encoding: UTF-8
-      string: '{"amount":12000,"customer_id":"cus_oJAX6a4sZs7v2O75","payment":{"payment_method":"pix","pix":{"expires_in":"259200"}}}'
+      string: '{"amount":3000,"customer_id":"cus_vkWYeq1FmF6eVKmo","payment":{"payment_method":"pix","pix":{"expires_in":"259200"}}}'
     headers:
       Content-Type:
       - application/json
@@ -23,11 +23,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Nov 2021 16:48:04 GMT
+      - Tue, 23 Nov 2021 18:39:41 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '560'
+      - '546'
       Connection:
       - keep-alive
       Cache-Control:
@@ -45,27 +45,27 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 6b2be2086cfbf3a7-GRU
+      - 6b2c858bcc3cf68f-GRU
     body:
       encoding: ASCII-8BIT
-      string: "{\r\n  \"id\": \"ch_bZdlyj4SQS48Pk1z\",\r\n  \"code\": \"N804HOHJME\",\r\n
-        \ \"gateway_id\": \"448404\",\r\n  \"amount\": 12000,\r\n  \"status\": \"pending\",\r\n
+      string: "{\r\n  \"id\": \"ch_klL6jbKiJiRyvpJb\",\r\n  \"code\": \"E4PVHZHE48\",\r\n
+        \ \"gateway_id\": \"14070\",\r\n  \"amount\": 3000,\r\n  \"status\": \"pending\",\r\n
         \ \"currency\": \"BRL\",\r\n  \"payment_method\": \"pix\",\r\n  \"created_at\":
-        \"2021-11-23T16:48:04Z\",\r\n  \"updated_at\": \"2021-11-23T16:48:04Z\",\r\n
-        \ \"customer\": {\r\n    \"id\": \"cus_oJAX6a4sZs7v2O75\",\r\n    \"name\":
+        \"2021-11-23T18:39:41Z\",\r\n  \"updated_at\": \"2021-11-23T18:39:41Z\",\r\n
+        \ \"customer\": {\r\n    \"id\": \"cus_vkWYeq1FmF6eVKmo\",\r\n    \"name\":
         \"Anchieta Junior\",\r\n    \"document\": \"25993188073\",\r\n    \"type\":
-        \"individual\",\r\n    \"delinquent\": false,\r\n    \"created_at\": \"2021-10-08T17:09:37Z\",\r\n
-        \   \"updated_at\": \"2021-11-10T10:49:29Z\",\r\n    \"phones\": {\r\n      \"home_phone\":
+        \"individual\",\r\n    \"delinquent\": false,\r\n    \"created_at\": \"2021-11-23T18:21:23Z\",\r\n
+        \   \"updated_at\": \"2021-11-23T18:39:04Z\",\r\n    \"phones\": {\r\n      \"home_phone\":
         {\r\n        \"country_code\": \"55\",\r\n        \"number\": \"984600591\",\r\n
         \       \"area_code\": \"14\"\r\n      }\r\n    }\r\n  },\r\n  \"last_transaction\":
         {\r\n    \"qr_code\": \"https://digital.mundipagg.com/pix/\",\r\n    \"qr_code_url\":
-        \"https://api.pagar.me/core/v5/transactions/tran_ve1VM8ofBfVRlrPB/qrcode?payment_method=pix\",\r\n
-        \   \"expires_at\": \"2021-11-26T16:48:04Z\",\r\n    \"id\": \"tran_ve1VM8ofBfVRlrPB\",\r\n
-        \   \"transaction_type\": \"pix\",\r\n    \"gateway_id\": \"448404\",\r\n
-        \   \"amount\": 12000,\r\n    \"status\": \"waiting_payment\",\r\n    \"success\":
-        true,\r\n    \"created_at\": \"2021-11-23T16:48:04Z\",\r\n    \"updated_at\":
-        \"2021-11-23T16:48:04Z\",\r\n    \"gateway_response\": {},\r\n    \"antifraud_response\":
-        {},\r\n    \"metadata\": {}\r\n  }\r\n}"
+        \"https://api.pagar.me/core/v5/transactions/tran_DevNmaqf8fdmjadQ/qrcode?payment_method=pix\",\r\n
+        \   \"expires_at\": \"2021-11-26T18:39:41Z\",\r\n    \"id\": \"tran_DevNmaqf8fdmjadQ\",\r\n
+        \   \"transaction_type\": \"pix\",\r\n    \"gateway_id\": \"14070\",\r\n    \"amount\":
+        3000,\r\n    \"status\": \"waiting_payment\",\r\n    \"success\": true,\r\n
+        \   \"created_at\": \"2021-11-23T18:39:41Z\",\r\n    \"updated_at\": \"2021-11-23T18:39:41Z\",\r\n
+        \   \"gateway_response\": {},\r\n    \"antifraud_response\": {},\r\n    \"metadata\":
+        {}\r\n  }\r\n}"
     http_version:
-  recorded_at: Tue, 23 Nov 2021 16:48:01 GMT
+  recorded_at: Tue, 23 Nov 2021 18:39:39 GMT
 recorded_with: VCR 5.1.0

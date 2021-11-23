@@ -19,7 +19,7 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
           let(:params) do
             {
               amount: 10_000,
-              customer_id: "cus_rXZgoqjFwtj5GODx",
+              customer_id: "cus_vkWYeq1FmF6eVKmo",
               statement_descriptor: "Padre Paulo Ricardo",
               card_number: "4000000000000010",
               card_exp_month: "10",
@@ -34,7 +34,7 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
             expect(subject.result["status"]).to eq "paid"
             expect(subject.result["last_transaction"]["installments"]).to eq 1
             expect(subject.result["last_transaction"]["status"]).to eq "captured"
-            expect(subject.result["last_transaction"]["card"]["id"]).to eq "card_7pMRljjC9oh38QZK"
+            expect(subject.result["last_transaction"]["card"]["id"]).to eq "card_QmWN42ACYCxMk186"
           end
         end
 
@@ -42,18 +42,18 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
           let(:params) do
             {
               amount: 1000,
-              customer_id: "card_ZeL9P5mUp1CBPWB1",
+              customer_id: "cus_vkWYeq1FmF6eVKmo",
               statement_descriptor: "Padre Paulo Ricardo",
               installments: 1,
-              card_id: "card_ZeL9P5mUp1CBPWB1"
+              card_id: "card_QmWN42ACYCxMk186"
             }
           end
 
           it "creates a charge on mundipagg" do
             expect(subject.result["status"]).to eq "paid"
-            expect(subject.result["last_transaction"]["installments"]).to eq 4
+            expect(subject.result["last_transaction"]["installments"]).to eq 1
             expect(subject.result["last_transaction"]["status"]).to eq "captured"
-            expect(subject.result["last_transaction"]["card"]["id"]).to eq "card_ZeL9P5mUp1CBPWB1"
+            expect(subject.result["last_transaction"]["card"]["id"]).to eq "card_QmWN42ACYCxMk186"
           end
         end
       end
@@ -61,18 +61,17 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
       context "when is a pix payment", vcr: true do
         let(:params) do
           {
-            amount: 120_00,
-            customer_id: "cus_oJAX6a4sZs7v2O75",
+            amount: 3000,
+            customer_id: "cus_vkWYeq1FmF6eVKmo",
             payment_type: "pix",
             aditional_information: %w[Description Subscription]
           }
         end
 
         it "creates a charge on mundipagg" do
-          p subject.result
           expect(subject.result["status"]).to eq "pending"
-          expect(subject.result["last_transaction"]["qr_code"]).to eq "https://digital.mundipagg.com/pix/"
-          expect(subject.result["last_transaction"]["qr_code_url"]).to eq "https://api.pagar.me/core/v5/transactions/tran_ve1VM8ofBfVRlrPB/qrcode?payment_method=pix"
+          expect(subject.result["last_transaction"]["qr_code"]).to_not be nil
+          expect(subject.result["last_transaction"]["qr_code_url"]).to_not be nil
         end
       end
     end
