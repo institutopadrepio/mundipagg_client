@@ -7,7 +7,7 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
   describe "#execute", vcr: true do
     before(:each) do
       MundipaggClient::MundipaggClientConfiguration.configure do |config|
-        config.api_key = "sk_test_XKYQWVbUYrfK8E2A"
+        config.api_key = "sk_test_123"
       end
     end
 
@@ -58,23 +58,22 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
         end
       end
 
-      # context "when is a pix payment", vcr: false do
-      #   WebMock.allow_net_connect!
-      #   VCR.turn_off!
-      #   let(:params) do
-      #     {
-      #       amount: 120_00,
-      #       customer_id: "cus_oJAX6a4sZs7v2O75",
-      #       payment_type: "pix",
-      #       aditional_information: %w[Description Subscription]
-      #     }
-      #   end
+      context "when is a pix payment", vcr: false do
+        WebMock.allow_net_connect!
+        VCR.turn_off!
+        let(:params) do
+          {
+            amount: 120_00,
+            customer_id: "cus_oJAX6a4sZs7v2O75",
+            payment_type: "pix",
+            aditional_information: %w[Description Subscription]
+          }
+        end
 
-      #   it "creates a charge on mundipagg" do
-      #     p "RESULT: #{subject.result} | Errors: #{subject.errors.messages}"
-      #     expect(subject.result["status"]).to eq "paid"
-      #   end
-      # end
+        it "creates a charge on mundipagg" do
+          expect(subject.result["status"]).to eq "paid"
+        end
+      end
     end
 
     context "failure" do
