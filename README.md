@@ -173,7 +173,7 @@ Create transactions using Pix
 #### Create
 
 ```ruby
-operation = MundipaggClient::Operations::CreditCards::Create.run(
+operation = MundipaggClient::Operations::Charges::Create.run(
     params: {
         amount: 120_00,
         customer_id: "cus_oJAX6a4sZs7v2O75",
@@ -182,7 +182,6 @@ operation = MundipaggClient::Operations::CreditCards::Create.run(
     }
 )
 ```
-
 
 ## Development
 
