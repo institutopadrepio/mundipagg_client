@@ -73,10 +73,6 @@ operation = MundipaggClient::Operations::Customers::Update.run(
 
 Create, retrieve, update or delete credit cards.
 
-```
-Quick note: If you don't pass the payment_type parameter, automatically the client will set it to credit card.
-```
-
 #### Create
 
 ```ruby
@@ -125,6 +121,8 @@ operation = MundipaggClient::Operations::CreditCards::Delete.run(
 ### Charges
 
 Create or delete (refund) charges.
+
+Quick note: If you don't pass the payment_type parameter, automatically the client will set it to credit card.
 
 #### Create a charge with a new credit card
 
