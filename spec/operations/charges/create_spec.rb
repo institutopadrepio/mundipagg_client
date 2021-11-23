@@ -69,7 +69,10 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
         end
 
         it "creates a charge on mundipagg" do
+          p subject.result
           expect(subject.result["status"]).to eq "pending"
+          expect(subject.result["last_transaction"]["qr_code"]).to eq "https://digital.mundipagg.com/pix/"
+          expect(subject.result["last_transaction"]["qr_code_url"]).to eq "https://api.pagar.me/core/v5/transactions/tran_ve1VM8ofBfVRlrPB/qrcode?payment_method=pix"
         end
       end
     end
