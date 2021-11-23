@@ -58,9 +58,7 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
         end
       end
 
-      context "when is a pix payment", vcr: false do
-        WebMock.allow_net_connect!
-        VCR.turn_off!
+      context "when is a pix payment", vcr: true do
         let(:params) do
           {
             amount: 120_00,
@@ -71,7 +69,7 @@ RSpec.describe MundipaggClient::Operations::Charges::Create do
         end
 
         it "creates a charge on mundipagg" do
-          expect(subject.result["status"]).to eq "paid"
+          expect(subject.result["status"]).to eq "pending"
         end
       end
     end
