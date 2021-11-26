@@ -7,33 +7,36 @@ RSpec.describe MundipaggClient::Operations::Customers::Update do
   describe "#execute", vcr: true do
     before(:each) do
       MundipaggClient::MundipaggClientConfiguration.configure do |config|
-        config.api_key = "sk_test_123"
+        config.api_key = "sk_test_XKYQWVbUYrfK8E2A"
       end
     end
 
     subject { described_class.run(customer_id: customer_id, params: params) }
 
     context "success" do
-      let(:customer_id) { "cus_rXZgoqjFwtj5GODx" }
+      let(:customer_id) { "cus_zQ6j9Z0IDILrXo78" }
       let(:params) do
         {
           name: "José Anchieta Junior",
           email: "zemaria@escriva.com",
-          document: "036.899.945-95"
+          document: "036.899.945-95",
+          phone: "(74) 9999-0000"
         }
       end
 
       let(:expected_result) do
         {
-          "id"=>"cus_rXZgoqjFwtj5GODx",
-          "name"=>"José Anchieta Junior",
-          "email"=>"zemaria@escriva.com",
-          "document"=>"03689994595",
-          "type"=>"individual",
-          "delinquent"=>false,
-          "created_at"=>"2021-05-13T15:11:30Z",
-          "updated_at"=>"2021-05-14T13:21:24Z",
-          "phones"=>{}
+          "id" => "cus_zQ6j9Z0IDILrXo78",
+          "name" => "José Anchieta Junior",
+          "email" => "zemaria@escriva.com",
+          "document" => "03689994595",
+          "type" => "individual",
+          "delinquent" => false,
+          "created_at" => "2021-11-26T21:01:57Z",
+          "updated_at" => "2021-11-26T22:30:37Z",
+          "phones" => {
+            "home_phone" => { "area_code" => "74", "country_code" => "55", "number" => "99990000" }
+          }
         }
       end
 

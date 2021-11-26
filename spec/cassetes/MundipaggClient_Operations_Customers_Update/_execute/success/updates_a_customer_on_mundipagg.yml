@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.mundipagg.com/core/v1/customers/cus_rXZgoqjFwtj5GODx
+    uri: https://api.mundipagg.com/core/v1/customers/cus_zQ6j9Z0IDILrXo78
     body:
       encoding: UTF-8
-      string: '{"name":"José Anchieta Junior","email":"zemaria@escriva.com","type":"individual","document":"03689994595"}'
+      string: '{"name":"José Anchieta Junior","email":"zemaria@escriva.com","type":"individual","document":"03689994595","phones":{"home_phone":{"country_code":"55","number":"99990000","area_code":"74"}}}'
     headers:
       Content-Type:
       - application/json
@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 May 2021 13:21:24 GMT
+      - Fri, 26 Nov 2021 22:30:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -40,18 +40,16 @@ http_interactions:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 0a0ca306960000e0787110d000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 64f46dea8d8fe078-FOR
+      - 6b468ff4aa65f74c-GRU
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ew0KICAiaWQiOiAiY3VzX3JYWmdvcWpGd3RqNUdPRHgiLA0KICAibmFtZSI6ICJKb3PDqSBBbmNoaWV0YSBKdW5pb3IiLA0KICAiZW1haWwiOiAiemVtYXJpYUBlc2NyaXZhLmNvbSIsDQogICJkb2N1bWVudCI6ICIwMzY4OTk5NDU5NSIsDQogICJ0eXBlIjogImluZGl2aWR1YWwiLA0KICAiZGVsaW5xdWVudCI6IGZhbHNlLA0KICAiY3JlYXRlZF9hdCI6ICIyMDIxLTA1LTEzVDE1OjExOjMwWiIsDQogICJ1cGRhdGVkX2F0IjogIjIwMjEtMDUtMTRUMTM6MjE6MjRaIiwNCiAgInBob25lcyI6IHt9DQp9
-    http_version: null
-  recorded_at: Fri, 14 May 2021 13:21:24 GMT
+        ew0KICAiaWQiOiAiY3VzX3pRNmo5WjBJRElMclhvNzgiLA0KICAibmFtZSI6ICJKb3PDqSBBbmNoaWV0YSBKdW5pb3IiLA0KICAiZW1haWwiOiAiemVtYXJpYUBlc2NyaXZhLmNvbSIsDQogICJkb2N1bWVudCI6ICIwMzY4OTk5NDU5NSIsDQogICJ0eXBlIjogImluZGl2aWR1YWwiLA0KICAiZGVsaW5xdWVudCI6IGZhbHNlLA0KICAiY3JlYXRlZF9hdCI6ICIyMDIxLTExLTI2VDIxOjAxOjU3WiIsDQogICJ1cGRhdGVkX2F0IjogIjIwMjEtMTEtMjZUMjI6MzA6MzdaIiwNCiAgInBob25lcyI6IHsNCiAgICAiaG9tZV9waG9uZSI6IHsNCiAgICAgICJjb3VudHJ5X2NvZGUiOiAiNTUiLA0KICAgICAgIm51bWJlciI6ICI5OTk5MDAwMCIsDQogICAgICAiYXJlYV9jb2RlIjogIjc0Ig0KICAgIH0NCiAgfQ0KfQ==
+    http_version:
+  recorded_at: Fri, 26 Nov 2021 22:30:37 GMT
 recorded_with: VCR 5.1.0

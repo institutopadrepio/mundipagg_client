@@ -23,7 +23,7 @@ http_interactions:
       message: Unprocessable Entity
     headers:
       Date:
-      - Fri, 14 May 2021 13:21:24 GMT
+      - Fri, 26 Nov 2021 22:30:38 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -40,14 +40,12 @@ http_interactions:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 0a0ca309610000e07474b45000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 64f46def0afee074-FOR
+      - 6b468ff719aaf718-GRU
     body:
       encoding: UTF-8
       string: "{\r\n  \"message\": \"The request is invalid.\",\r\n  \"errors\": {\r\n
@@ -55,6 +53,6 @@ http_interactions:
         \ },\r\n  \"request\": {\r\n    \"name\": \"\",\r\n    \"email\": \"fulano@email.com\",\r\n
         \   \"document\": \"123123\",\r\n    \"type\": \"individual\",\r\n    \"phones\":
         {}\r\n  }\r\n}"
-    http_version: null
-  recorded_at: Fri, 14 May 2021 13:21:24 GMT
+    http_version:
+  recorded_at: Fri, 26 Nov 2021 22:30:38 GMT
 recorded_with: VCR 5.1.0

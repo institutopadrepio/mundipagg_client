@@ -30,10 +30,10 @@ module MundipaggClient
 
         def customer_params
           {}.tap do |hash|
-            hash[:name] = params[:name],
-            hash[:email] = params[:email],
-            hash[:type] = "individual",
-            hash[:document] = formatted_document,
+            hash[:name] = params[:name]
+            hash[:email] = params[:email]
+            hash[:type] = "individual"
+            hash[:document] = formatted_document
             hash[:phones] = phones if params[:phone].present?
           end
         end

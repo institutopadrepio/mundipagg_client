@@ -116,6 +116,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-darwin-21
 
 DEPENDENCIES
   addressable (>= 2.8.0)
@@ -131,4 +132,4 @@ DEPENDENCIES
   webmock (~> 3.8)
 
 BUNDLED WITH
-   2.2.9
+   2.2.32
