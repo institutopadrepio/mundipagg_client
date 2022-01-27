@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require 'pry'
+
+require "pry"
 
 module MundipaggClient
   module Operations
@@ -94,7 +95,7 @@ module MundipaggClient
         def credit_card_params(hash)
           hash[:payment][:credit_card] = {
             capture: true,
-            recurrence: true,
+            recurrence: false,
             installments: params[:installments],
             statement_descriptor: params[:statement_descriptor]
           }
