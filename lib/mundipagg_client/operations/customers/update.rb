@@ -33,7 +33,7 @@ module MundipaggClient
             hash[:name] = params[:name]
             hash[:email] = params[:email]
             hash[:type] = "individual"
-            hash[:document] = formatted_document if params[:document].present?
+            hash[:document] = formatted_document
             hash[:phones] = phones if params[:phone].present?
           end
         end
