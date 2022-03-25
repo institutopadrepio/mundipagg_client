@@ -12,7 +12,7 @@ module MundipaggClient
           string :email
           string :document
           string :phone, default: nil
-          string :country, default: "280"
+          string :country
         end
 
         def execute
