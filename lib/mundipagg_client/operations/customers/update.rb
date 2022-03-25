@@ -35,20 +35,18 @@ module MundipaggClient
             hash[:email] = params[:email]
             hash[:type] = "individual"
             hash[:document] = formatted_document
-            hash[:phones] = phones if params[:phone].present?
+            hash[:phones] = phones if params[:phone].present? && params[:country] == "280"
           end
         end
 
         def phones
-          if params[:country].present? && params[:country] == "280"
-            {
-              "home_phone": {
-                "country_code": "55",
-                "number": phone_number,
-                "area_code": phone_area_code
-              }
+          {
+            "home_phone": {
+              "country_code": "55",
+              "number": phone_number,
+              "area_code": phone_area_code
             }
-          end
+          }
         end
 
         def phone_number
