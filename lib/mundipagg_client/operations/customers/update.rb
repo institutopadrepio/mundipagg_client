@@ -23,6 +23,7 @@ module MundipaggClient
         private
 
         def request
+          binding.pry
           @request ||= connection.put("#{BASE_URL}/customers/#{customer_id}") do |req|
             req.body = customer_params.to_json
           end
@@ -33,7 +34,7 @@ module MundipaggClient
             hash[:name] = params[:name]
             hash[:email] = params[:email]
             hash[:type] = "individual"
-            hash[:document] = formatted_document if params[:document].present?
+            hash[:document] = formatted_document
             hash[:phones] = phones if params[:phone].present?
           end
         end
@@ -57,7 +58,7 @@ module MundipaggClient
         end
 
         def formatted_document
-          params[:document].gsub(".", "").gsub("-", "")
+          params[:document].present? ? params[:document].gsub(".", "").gsub("-", "") : nil
         end
       end
     end
