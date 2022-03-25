@@ -12,6 +12,7 @@ module MundipaggClient
           string :email
           string :document
           string :phone, default: nil
+          string :country, default: "280"
         end
 
         def execute
@@ -40,13 +41,15 @@ module MundipaggClient
         end
 
         def phones
-          {
-            "home_phone": {
-              "country_code": "55",
-              "number": phone_number,
-              "area_code": phone_area_code
+          if params[:country].present? && params[:country] == "280"
+            {
+              "home_phone": {
+                "country_code": "55",
+                "number": phone_number,
+                "area_code": phone_area_code
+              }
             }
-          }
+          end
         end
 
         def phone_number
