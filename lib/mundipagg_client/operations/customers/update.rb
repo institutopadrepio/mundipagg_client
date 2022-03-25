@@ -57,7 +57,7 @@ module MundipaggClient
         end
 
         def formatted_document
-          params[:document].present? ? params[:document].gsub(".", "").gsub("-", "") : nil
+          params[:document].blank? ? nil : params[:document].gsub(".", "").gsub("-", "")
         end
       end
     end
