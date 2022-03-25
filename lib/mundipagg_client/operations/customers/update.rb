@@ -24,7 +24,6 @@ module MundipaggClient
         private
 
         def request
-          binding.pry
           @request ||= connection.put("#{BASE_URL}/customers/#{customer_id}") do |req|
             req.body = customer_params.to_json
           end
