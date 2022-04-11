@@ -67,7 +67,7 @@ module MundipaggClient
 
         def pix_params(hash)
           hash[:payment][:pix] = {
-            expires_in: "259200" # 3 days in seconds
+            expires_in: "864000" # 10 days in seconds
           }
         end
 
