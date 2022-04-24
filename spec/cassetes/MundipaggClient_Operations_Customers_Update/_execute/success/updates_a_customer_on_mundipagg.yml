@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.mundipagg.com/core/v1/customers/cus_zQ6j9Z0IDILrXo78
+    uri: https://api.mundipagg.com/core/v1/customers/cus_LmDMyyYi6ot4MlO8
     body:
       encoding: UTF-8
-      string: '{"name":"José Anchieta Junior","email":"zemaria@escriva.com","type":"individual","document":"03689994595","phones":{"home_phone":{"country_code":"55","number":"99990000","area_code":"74"}}}'
+      string: '{"name":"José Anchieta Junior","email":"zemaria@escriva.com","type":"individual","document":"03689994595"}'
     headers:
       Content-Type:
       - application/json
@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Nov 2021 22:30:37 GMT
+      - Sun, 24 Apr 2022 04:17:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -45,11 +45,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 6b468ff4aa65f74c-GRU
+      - 700c07534f8aa585-GRU
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ew0KICAiaWQiOiAiY3VzX3pRNmo5WjBJRElMclhvNzgiLA0KICAibmFtZSI6ICJKb3PDqSBBbmNoaWV0YSBKdW5pb3IiLA0KICAiZW1haWwiOiAiemVtYXJpYUBlc2NyaXZhLmNvbSIsDQogICJkb2N1bWVudCI6ICIwMzY4OTk5NDU5NSIsDQogICJ0eXBlIjogImluZGl2aWR1YWwiLA0KICAiZGVsaW5xdWVudCI6IGZhbHNlLA0KICAiY3JlYXRlZF9hdCI6ICIyMDIxLTExLTI2VDIxOjAxOjU3WiIsDQogICJ1cGRhdGVkX2F0IjogIjIwMjEtMTEtMjZUMjI6MzA6MzdaIiwNCiAgInBob25lcyI6IHsNCiAgICAiaG9tZV9waG9uZSI6IHsNCiAgICAgICJjb3VudHJ5X2NvZGUiOiAiNTUiLA0KICAgICAgIm51bWJlciI6ICI5OTk5MDAwMCIsDQogICAgICAiYXJlYV9jb2RlIjogIjc0Ig0KICAgIH0NCiAgfQ0KfQ==
+        ew0KICAiaWQiOiAiY3VzX0xtRE15eVlpNm90NE1sTzgiLA0KICAibmFtZSI6ICJKb3PDqSBBbmNoaWV0YSBKdW5pb3IiLA0KICAiZW1haWwiOiAiemVtYXJpYUBlc2NyaXZhLmNvbSIsDQogICJkb2N1bWVudCI6ICIwMzY4OTk5NDU5NSIsDQogICJ0eXBlIjogImluZGl2aWR1YWwiLA0KICAiZGVsaW5xdWVudCI6IGZhbHNlLA0KICAiY3JlYXRlZF9hdCI6ICIyMDIyLTAyLTE4VDE3OjQzOjI1WiIsDQogICJ1cGRhdGVkX2F0IjogIjIwMjItMDQtMjRUMDQ6MTc6MjBaIiwNCiAgInBob25lcyI6IHt9DQp9
     http_version:
-  recorded_at: Fri, 26 Nov 2021 22:30:37 GMT
+  recorded_at: Sun, 24 Apr 2022 04:17:20 GMT
 recorded_with: VCR 5.1.0

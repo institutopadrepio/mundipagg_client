@@ -23,7 +23,7 @@ http_interactions:
       message: Unprocessable Entity
     headers:
       Date:
-      - Fri, 26 Nov 2021 22:30:38 GMT
+      - Sun, 24 Apr 2022 04:22:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -45,7 +45,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 6b468ff719aaf718-GRU
+      - 700c0f7b0cf2a493-GRU
     body:
       encoding: UTF-8
       string: "{\r\n  \"message\": \"The request is invalid.\",\r\n  \"errors\": {\r\n
@@ -54,5 +54,5 @@ http_interactions:
         \   \"document\": \"123123\",\r\n    \"type\": \"individual\",\r\n    \"phones\":
         {}\r\n  }\r\n}"
     http_version:
-  recorded_at: Fri, 26 Nov 2021 22:30:38 GMT
+  recorded_at: Sun, 24 Apr 2022 04:22:54 GMT
 recorded_with: VCR 5.1.0
