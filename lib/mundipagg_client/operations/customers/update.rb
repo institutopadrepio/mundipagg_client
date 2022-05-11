@@ -41,10 +41,10 @@ module MundipaggClient
 
         def phones
           {
-            "home_phone": {
-              "country_code": "55",
-              "number": phone_number,
-              "area_code": phone_area_code
+            mobile_phone: {
+              country_code: "55",
+              number: phone_number,
+              area_code: phone_area_code
             }
           }
         end
