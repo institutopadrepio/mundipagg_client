@@ -9,7 +9,9 @@ module MundipaggClient
         hash :params do
           string :name
           string :email
+          string :phone, default: nil
           string :document, default: nil
+          string :country, default: nil
         end
 
         def execute
@@ -27,12 +29,31 @@ module MundipaggClient
         end
 
         def customer_params
+          {}.tap do |hash|
+            hash[:name] = params[:name]
+            hash[:email] = params[:email]
+            hash[:type] = "individual"
+            hash[:document] = formatted_document
+            hash[:phones] = phones if params[:phone].present? && params[:country] == "280"
+          end
+        end
+
+        def phones
           {
-            name: params[:name],
-            email: params[:email],
-            type: "individual",
-            document: formatted_document
+            mobile_phone: {
+              country_code: "55",
+              number: phone_number,
+              area_code: phone_area_code
+            }
           }
+        end
+
+        def phone_number
+          params[:phone].split(")").last.gsub(" ", "").gsub("-", "")
+        end
+
+        def phone_area_code
+          params[:phone].split(")").first.gsub("(", "")
         end
 
         def formatted_document
