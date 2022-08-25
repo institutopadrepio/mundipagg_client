@@ -69,25 +69,6 @@ module MundipaggClient
           hash[:payment][:pix] = {
             expires_in: "864000" # 10 days in seconds
           }
-          hash[:phones] = phones if params[:phone].present?
-        end
-
-        def phones
-          {
-            mobile_phone: {
-              country_code: "55",
-              number: phone_number,
-              area_code: phone_area_code
-            }
-          }
-        end
-
-        def phone_number
-          params[:phone].split(")").last.gsub(" ", "").gsub("-", "")
-        end
-
-        def phone_area_code
-          params[:phone].split(")").first.gsub("(", "")
         end
 
         def additional_information(hash)
