@@ -22,7 +22,6 @@ module MundipaggClient
           string :card_exp_year, default: nil
           string :card_cvv, default: nil
           array :additional_information, default: nil
-          string :phone, default: nil
         end
 
         def execute

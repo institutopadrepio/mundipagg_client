@@ -12,7 +12,6 @@ module MundipaggClient
           string :email
           string :document
           string :phone, default: nil
-          string :country, default: nil
         end
 
         def execute
@@ -35,30 +34,30 @@ module MundipaggClient
             hash[:email] = params[:email]
             hash[:type] = "individual"
             hash[:document] = formatted_document
-            hash[:phones] = phones if params[:phone].present? && params[:country] == "280"
+            hash[:phones] = phones if params[:phone].present?
           end
         end
 
         def phones
           {
-            "home_phone": {
-              "country_code": "55",
-              "number": phone_number,
-              "area_code": phone_area_code
+            mobile_phone: {
+              country_code: "55",
+              number: phone_number,
+              area_code: phone_area_code
             }
           }
         end
 
         def phone_number
-          params[:phone].split(")").last.gsub(" ", "").gsub("-", "")
+          params[:phone].tr('^0-9', '')[2...-1]
         end
 
         def phone_area_code
-          params[:phone].split(")").first.gsub("(", "")
+          params[:phone].tr('^0-9', '')[0...2]
         end
 
         def formatted_document
-          params[:document].present? ? params[:document].gsub(".", "").gsub("-", "") : nil
+          params[:document].present? ? params[:document].tr('^0-9', '') : nil
         end
       end
     end
