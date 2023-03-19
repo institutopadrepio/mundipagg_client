@@ -13,7 +13,8 @@ module MundipaggClient
     end
 
     def build_connection
-      connection = Faraday.new(headers: headers, :proxy => ENV["FIXIE_URL"])
+      connection = Faraday.new(headers: headers, :proxy => ENV["FIXIE_URL"]) if ENV["FIXIE_URL"].present?
+      connection = Faraday.new(headers: headers) if ENV["FIXIE_URL"].blank?
       connection.basic_auth(MundipaggClient::MundipaggClientConfiguration.configuration.api_key, "")
       connection
     end
