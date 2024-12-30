@@ -13,9 +13,12 @@ module MundipaggClient
     end
 
     def build_connection
-      connection = Faraday.new(headers: headers)
-      connection.basic_auth(MundipaggClient::MundipaggClientConfiguration.configuration.api_key, "")
-      connection
+      Faraday.new(headers: headers) do |conn|
+        conn.basic_auth(
+          MundipaggClient::MundipaggClientConfiguration.configuration.api_key,
+          ""
+        )
+      end
     end
 
     def connection
