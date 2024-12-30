@@ -14,10 +14,8 @@ module MundipaggClient
 
     def build_connection
       Faraday.new(headers: headers) do |conn|
-        conn.basic_auth(
-          MundipaggClient::MundipaggClientConfiguration.configuration.api_key,
+        conn.request :authorization, :basic, MundipaggClient::MundipaggClientConfiguration.configuration.api_key,
           ""
-        )
       end
     end
 
